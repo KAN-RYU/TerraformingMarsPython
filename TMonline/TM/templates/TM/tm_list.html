@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+	<head>
+		<TITLE> TM </TITLE>
+	</head>
+	<body>
+		<div id="content">
+			<h1>TM List</h1>
+			<ul>
+				{% for TM in object_list %}
+					<li><a href="{% url 'TM:detail' TM.id %}"> {{ TM }} </a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</body>
+</html>
