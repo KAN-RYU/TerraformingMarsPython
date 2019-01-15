@@ -1,5 +1,5 @@
-import player
-import board
+from player import player
+from board import board
 
 class Game:
     def __init__(self, num_of_player):
