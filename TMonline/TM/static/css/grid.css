@@ -20,7 +20,7 @@
 }
 
 .hex:after {
-    content: "";
+    content: " ";
     width: 0;
     position: absolute;
     bottom: -30px;
@@ -35,4 +35,11 @@
 
 .hex-row.odd{
 	margin-left: 53px;
+}
+
+.text{
+	word-break: break-all;
+	position: absolute;
+	width: 100%;
+	text-align: center;
 }
