@@ -1,21 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 {% load static %}
+{% load range %}
 <html>
 	<head>
 		<title>TM grid</title>
 	</head>
 	<body>
 		<link rel="stylesheet" href="{% static 'css/grid.css' %}">
-			<div class="hex-row odd">
-				<div class="hex"></div>
-				<div class="hex">
-					<div class="text">
-						<p>num1arstuvasdfweofij</p>
-					</div>
-				</div>
-				<div class="hex"></div>
-				<div class="hex"></div>
+			{%for i in 9|range %}
+			<div class="{% cycle 'hex-row odd' 'hex-row' %}">
+				{% for j in 9|range %}
+					<div class="hex"></div>
+				{% endfor %}
 			</div>
+			{% endfor %}
 			<div class="hex-row">
 				<div class="hex"></div>	
 				<div class="hex"></div>

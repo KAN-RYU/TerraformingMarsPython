@@ -17,6 +17,8 @@
     height: 60px;
     background-color: #6C6;
     position: relative;
+	overflow: visible;
+	display: inline;
 }
 
 .hex:after {
@@ -31,10 +33,25 @@
 
 .hex-row{
 	clear: left;
+	white-space: nowrap;
+	width: 20000px;
 }
 
 .hex-row.odd{
+	overflow: visible;
 	margin-left: 53px;
+	white-space: nowrap;
+	width: 20000px;
+}
+
+.emptybox {
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 4px;
+	margin-left: 3px;
+	width: 104px;
+	height: 60px;
+	position: relative;
 }
 
 .text{
