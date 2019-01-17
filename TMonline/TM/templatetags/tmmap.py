@@ -3,10 +3,24 @@ from django import template
 register = template.Library()
 
 """
-
+0 0 1 1 1 1 1
+0 0 1 1 1 1 1 1
+0 1 1 1 1 1 1 1
+0 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
 """
 
-@register.filter(name='tmmap')
+@register.simple_tag(name='tmmap')
 def tmmap():
-    returnA = []
+    returnA = [[0,0,1,1,1,1,1],
+               [0,0,1,1,1,1,1,1],
+               [0,1,1,1,1,1,1,1],
+               [0,1,1,1,1,1,1,1,1],
+               [1,1,1,1,1,1,1,1,1],
+               [0,1,1,1,1,1,1,1,1],
+               [0,1,1,1,1,1,1,1],
+               [0,0,1,1,1,1,1,1],
+               [0,0,1,1,1,1,1]]
+    return returnA
+
 

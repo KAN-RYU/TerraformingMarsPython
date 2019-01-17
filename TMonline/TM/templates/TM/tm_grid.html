@@ -1,31 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 {% load static %}
-{% load range %}
+{% load tmmap %}
 <html>
 	<head>
 		<title>TM grid</title>
 	</head>
 	<body>
+		<h1>TM grid</h1>
 		<link rel="stylesheet" href="{% static 'css/grid.css' %}">
-			{%for i in 9|range %}
+			{% tmmap as tmm %}
+			{% for i in tmm %}
 			<div class="{% cycle 'hex-row odd' 'hex-row' %}">
-				{% for j in 9|range %}
-					<div class="hex"></div>
+				{% for j in i %}
+					{% if j == 0 %}
+						<div class="emptybox"></div>
+					{% elif j == 1 %}
+						<div class="hex"></div>
+					{% endif %}
 				{% endfor %}
 			</div>
 			{% endfor %}
-			<div class="hex-row">
-				<div class="hex"></div>	
-				<div class="hex"></div>
-				<div class="hex"></div>
-				<div class="hex"></div>
-				<div class="hex"></div>
-			</div>
-			<div class="hex-row odd">
-				<div class="hex"></div>
-				<div class="hex"></div>
-				<div class="hex"></div>
-				<div class="hex"></div>
-			</div>
 	</body>
 </html>

@@ -18,7 +18,6 @@
     background-color: #6C6;
     position: relative;
 	overflow: visible;
-	display: inline;
 }
 
 .hex:after {
